@@ -17,18 +17,21 @@ public class RabbitMqConfig {
     @Value("${rabbitmq.exchange.name}")
     private String exchange;
 
+    @Value("${rabbitmq.routing.key}")
+    private String routingKey;
+
     @Bean
     public Queue queue() {
-        return new Queue(queue);
+        return new Queue(queue, true);
     }
 
     @Bean
-    public TopicExchange exchange(String exchange) {
+    public TopicExchange exchange() {
         return new TopicExchange(exchange);
     }
 
     @Bean
     public Binding binding() {
-        return BindingBuilder.bind(queue()).to(exchange(exchange)).with("java_guide");
+        return BindingBuilder.bind(queue()).to(exchange()).with(routingKey);
     }
 }
