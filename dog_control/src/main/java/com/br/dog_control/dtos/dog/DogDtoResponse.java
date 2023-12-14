@@ -1,34 +1,19 @@
 package com.br.dog_control.dtos.dog;
 
-import java.net.URL;
-
-import com.br.dog_control.models.Owner;
 import com.br.dog_control.utils.enums.Breed;
 
 public class DogDtoResponse {
-    
-    private Owner owner;
+
     private String name;
     private int age;
     private Breed breed;
     private String color;
-    private URL image;
-
-    public DogDtoResponse(Long id, Owner owner, String name, int age, Breed breed, String color, URL image) {
-        this.owner = owner;
+    
+    public DogDtoResponse(String name, int age, Breed breed, String color) {
         this.name = name;
         this.age = age;
         this.breed = breed;
         this.color = color;
-        this.image = image;
-    }
-
-    public Owner getOwner() {
-        return owner;
-    }
-
-    public void setOwner(Owner owner) {
-        this.owner = owner;
     }
 
     public String getName() {
@@ -63,14 +48,6 @@ public class DogDtoResponse {
         this.color = color;
     }
 
-    public URL getImage() {
-        return image;
-    }
-
-    public void setImage(URL image) {
-        this.image = image;
-    }
-
     
-    
+
 }

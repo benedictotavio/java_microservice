@@ -1,74 +1,31 @@
 package com.br.dog_control.dtos.dog;
 
-import java.net.URL;
-
-import com.br.dog_control.models.Owner;
 import com.br.dog_control.utils.enums.Breed;
 
-public class DogDtoRequest {
+public record DogDtoRequest(String ownerId, String name, int age, Breed breed, String color, String image) {
 
-    private Owner owner;
-    private String name;
-    private int age;
-    private Breed breed;
-    private String color;
-    private URL image;
-
-    public DogDtoRequest(Owner owner, String name, int age, Breed breed, String color, URL image) {
-        this.owner = owner;
-        this.name = name;
-        this.age = age;
-        this.breed = breed;
-        this.color = color;
-        this.image = image;
+    public String ownerId() {
+        return ownerId;
     }
 
-    public Owner getOwner() {
-        return owner;
-    }
-
-    public void setOwner(Owner owner) {
-        this.owner = owner;
-    }
-
-    public String getName() {
+    public String name() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
+    public int age() {
         return age;
     }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public Breed getBreed() {
+    public Breed breed() {
         return breed;
     }
 
-    public void setBreed(Breed breed) {
-        this.breed = breed;
-    }
-
-    public String getColor() {
+    public String color() {
         return color;
     }
 
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public URL getImage() {
+    public String image() {
         return image;
-    }
-
-    public void setImage(URL image) {
-        this.image = image;
     }
 
 }

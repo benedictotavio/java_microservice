@@ -1,9 +1,25 @@
 # Variables
 @url = http://localhost:8080/api/v1
+@Cpf = "000.000.000-01"
 
 POST {{url}}/dog
 Content-Type: application/json
 
 {
-    
+    "name":"Totó",
+    "breed":"POODLE",
+    "age": 10,
+    "color":"brown",
+    "ownerId":{{Cpf}},
+    "image":"https://www.pexels.com/photo/two-yellow-labrador-retriever-puppies-1108099/"
+}
+
+###
+POST {{url}}/owner
+Content-Type: application/json
+
+{
+    "name":"Dj Caio Dog",
+    "document":{{Cpf}},
+    "email":"dj_caio@dog.com.br"
 }
