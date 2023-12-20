@@ -32,6 +32,7 @@ public class DogService implements DogServiceInterface {
     public DogDtoResponse saveDog(DogDtoRequest dogDtoRequest) throws MalformedURLException, URISyntaxException {
         Owner owner = ownerRepository.findById(dogDtoRequest.ownerId())
                 .orElseThrow(() -> new RuntimeException("Owner not found"));
+                
         Dog dog = new Dog();
         dog.setAge(dogDtoRequest.age());
         dog.setBreed(dogDtoRequest.breed());

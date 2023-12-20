@@ -1,0 +1,14 @@
+@url = http://localhost:8081/api/V1/user
+
+GET {{url}} HTTP/1.1
+
+###
+POST {{url}} HTTP/1.1
+Content-Type: application/json
+
+{
+    "id":"15ea0e1d-de4a-4bd0-aea3-1cd1e140b57c",
+    "name":"str",
+    "email":"emmmemem",
+    "password":"1111111"
+}

@@ -1,5 +1,6 @@
-package com.br.auth_control.config;
+package com.br.auth_control.consumer;
 
+import com.br.auth_control.config.RabbitMQConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;

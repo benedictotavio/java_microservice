@@ -1,5 +1,6 @@
 package com.br.auth_control.config;
 
+import com.br.auth_control.consumer.UserRegisteredListener;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer;
 import org.springframework.amqp.rabbit.listener.adapter.MessageListenerAdapter;
